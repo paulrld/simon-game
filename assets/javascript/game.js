@@ -4,7 +4,7 @@ window.onload = function() {
   //  Click events are done for us:
 game.audio.preloadAudio()
   //button listener for selecting characters for both player and enemy
-  $(".green").on("mousedown",game.test3);
+/*  $(".green").on("mousedown",game.test3);*/
   //attack button listener
   $(".red").on("mousedown",game.test3);
 
@@ -12,10 +12,17 @@ game.audio.preloadAudio()
   $(".blue").on("mousedown",game.test3);
 
 
-  $(".green").on("mousedown",game.audio.allLoaded);
+ /* $(".green").on("mousedown",game.audio.allLoaded);*/
   $(".red").on("mousedown",game.audio.allLoaded);
   $(".yellow").on("mousedown",game.audio.allLoaded);
   $(".blue").on("mousedown",game.audio.allLoaded);
+
+  var el = document.getElementById("green");
+  el.addEventListener("touchstart", game.audio.allLoaded, false);
+/*  el.addEventListener("touchend", game.audio.allLoaded, false);*/
+  /*el.addEventListener("touchcancel", game.audio.allLoaded, false);*/
+/*  el.addEventListener("touchmove", game.audio.allLoaded, false);*/
+
 
   /*$(".green").on("mousedown",game.audio.changeColor);*/
 };
