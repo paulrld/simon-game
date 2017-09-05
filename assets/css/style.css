@@ -1,0 +1,30 @@
+#green {
+    background-color:green;
+
+}
+#red {
+    background-color:#cc0000;
+}
+#yellow {
+    background-color:#FFD801;
+}
+#blue {
+    background-color:#0000A0;
+}
+
+/* #green {
+    background-color:#66FF00;
+
+}
+#red {
+    background-color:#f3172d;red
+}
+#yellow {
+    background-color:#f2f735;yellow
+}
+#blue {
+    background-color:#2052f3;blue
+} */
+.col-md-3 {
+        height:250px;
+}
