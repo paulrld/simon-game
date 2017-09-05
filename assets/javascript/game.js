@@ -4,7 +4,28 @@ window.onload = function() {
   //  Click events are done for us:
 game.audio.preloadAudio()
   //button listener for selecting characters for both player and enemy
-/*  $(".green").on("mousedown",game.test3);*/
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ // some code..
+   var green = document.getElementById("green");
+   var blue = document.getElementById("blue");
+   var red = document.getElementById("red");
+   var yellow = document.getElementById("yellow");
+   green.addEventListener("touchstart", game.audio.allLoaded, false);
+   blue.addEventListener("touchstart", game.audio.allLoaded, false);
+   red.addEventListener("touchstart", game.audio.allLoaded, false);
+   yellow.addEventListener("touchstart", game.audio.allLoaded, false);
+
+  green.addEventListener("touchstart", game.test3, false);
+   blue.addEventListener("touchstart", game.test3, false);
+   red.addEventListener("touchstart", game.test3, false);
+   yellow.addEventListener("touchstart", game.test3, false);
+
+}else
+{
+//Now include js files
+  $(".green").on("mousedown",game.test3);
   //attack button listener
   $(".red").on("mousedown",game.test3);
 
@@ -12,13 +33,12 @@ game.audio.preloadAudio()
   $(".blue").on("mousedown",game.test3);
 
 
- /* $(".green").on("mousedown",game.audio.allLoaded);*/
+  $(".green").on("mousedown",game.audio.allLoaded);
   $(".red").on("mousedown",game.audio.allLoaded);
   $(".yellow").on("mousedown",game.audio.allLoaded);
   $(".blue").on("mousedown",game.audio.allLoaded);
+}
 
-  var el = document.getElementById("green");
-  el.addEventListener("touchstart", game.audio.allLoaded, false);
 /*  el.addEventListener("touchend", game.audio.allLoaded, false);*/
   /*el.addEventListener("touchcancel", game.audio.allLoaded, false);*/
 /*  el.addEventListener("touchmove", game.audio.allLoaded, false);*/
