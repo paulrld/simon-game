@@ -136,7 +136,7 @@ function sound() {
           var aud=new Audio();
           game.audio.tags.push(aud);    // add this track to collection
           aud.preload=true;  // important
-          aud.controls=true; // only so we can see the player's time display to verify it works
+          aud.controls=false; // only so we can see the player's time display to verify it works
           aud.addEventListener('canplaythrough', loadedAudio, false);
           document.body.appendChild(aud);
           aud.src=soundSelected;
